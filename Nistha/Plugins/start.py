@@ -9,7 +9,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 
-NISTHA_IMG = (
+NISTHA_IMG = [
 "https://te.legra.ph/file/1b82afbf90d074849136e.jpg",
 "https://te.legra.ph/file/0f64be1cf523f76aa0e2e.jpg",
 "https://te.legra.ph/file/1bedd3d90170cc6da5282.jpg",
@@ -18,9 +18,7 @@ NISTHA_IMG = (
 "https://te.legra.ph/file/45f301147ffede1856f0d.jpg",
 "https://te.legra.ph/file/40f551a935da47f59ff64.jpg",
 
-)
-
-
+]
 
 
 
@@ -61,7 +59,7 @@ async def _human_time_duration(seconds):
 async def start_(client: Client, message: Message):
     await message.reply_photo(
         random.choice(NISTHA_IMG),
-        caption=(START_TEXT),
+        caption=START_TEXT,
     reply_markup=InlineKeyboardMarkup(
     [
         [
@@ -85,7 +83,7 @@ async def start_(client: Client, message: Message):
 async def start(client: Client, message: Message):
     await message.reply_photo(
         random.choice(NISTHA_IMG),
-        caption=(START_TEXT),
+        caption=START_TEXT,
         reply_markup=InlineKeyboardMarkup(
     [
         [
